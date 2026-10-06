@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generador de contraseñas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🔐 Generador de contraseñas</h1>
+    <p class="sub">Crea contraseñas seguras en un clic.</p>
+
+    <div class="resultado">
+      <output id="contrasena" aria-live="polite"></output>
+      <button id="copiar" class="icono" title="Copiar" type="button">📋</button>
+    </div>
+
+    <div class="fuerza">
+      <div class="barra"><span id="barra"></span></div>
+      <small id="textoFuerza">Seguridad</small>
+    </div>
+
+    <label class="campo" for="longitud">Longitud (6 a 64 caracteres)</label>
+    <div class="longitud">
+      <input type="range" id="rango" min="6" max="64" value="16">
+      <input type="number" id="longitud" value="16" inputmode="numeric">
+    </div>
+    <p id="aviso" class="aviso" role="alert"></p>
+
+    <div class="opciones">
+      <label><input type="checkbox" id="mayus" checked><span>Mayúsculas (A-Z)</span></label>
+      <label><input type="checkbox" id="nums" checked><span>Números (0-9)</span></label>
+      <label><input type="checkbox" id="simbolos" checked><span>Símbolos (!@#$%)</span></label>
+    </div>
+
+    <button id="generar" class="principal" type="button">Generar contraseña</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
